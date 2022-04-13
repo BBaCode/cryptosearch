@@ -1,0 +1,12 @@
+.header {
+  width: 100vw;
+  height: 5vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+}

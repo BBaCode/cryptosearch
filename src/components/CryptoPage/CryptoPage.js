@@ -1,9 +1,9 @@
-import "./HomePage.scss";
+import "./CryptoPage.scss";
 import { useState, useEffect } from "react";
 import Select from "react-select";
 import axios from "axios";
 
-function HomePage() {
+function CryptoPage() {
   let [coinID, setCoinID] = useState();
   let [name, setName] = useState();
   let [symbol, setSymbol] = useState();
@@ -101,4 +101,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default CryptoPage;
