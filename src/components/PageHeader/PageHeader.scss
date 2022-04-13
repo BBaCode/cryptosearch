@@ -1,9 +1,13 @@
+@use "../../styles/partials/variables" as *;
 .header {
-  width: 100vw;
-  height: 5vh;
-  background-color: white;
+  height: 5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  color: $bluegreen;
 
   &__list {
     display: flex;

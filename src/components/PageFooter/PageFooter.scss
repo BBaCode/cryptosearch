@@ -1,9 +1,14 @@
+@use "../../styles/partials/variables" as *;
+
 .footer {
   width: 100vw;
-  height: 5vh;
-  background-color: white;
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  color: $bluegreen;
 
   &__text {
     vertical-align: middle;
+    text-align: center;
   }
 }

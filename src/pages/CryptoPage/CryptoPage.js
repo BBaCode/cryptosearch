@@ -52,47 +52,48 @@ function CryptoPage() {
 
   if (!coinID)
     return (
-      <div className="home">
-        <div className="home__card">
+      <div className="crypto">
+        <div className="crypto__card">
           Pick a coin and click go for more info!
-          <form onSubmit={handleSubmit} className="home__form">
+          <form onSubmit={handleSubmit} className="crypto__form">
             <Select name="select" options={options} />
-            <button className="home__button">GO</button>
+            <button className="crypto__button">GO</button>
           </form>
         </div>
       </div>
     );
 
   return (
-    <div className="home">
-      <div className="home__card">
-        <form onSubmit={handleSubmit} className="home__form">
+    <div className="crypto">
+      <div className="crypto__card">
+        <form onSubmit={handleSubmit} className="crypto__form">
           <Select name="select" options={options} />
-          <button className="home__button">GO</button>
+          <button className="crypto__button">GO</button>
         </form>
-        <div className="home__info">
-          <p className="home__info-card">
-            <span className="home__info--bold">Name: </span> {name}
+        <div className="crypto__info">
+          <p className="crypto__info-card">
+            <span className="crypto__info--bold">Name: </span> {name}
           </p>
-          <p className="home__info-card">
-            <span className="home__info--bold">Symbol: </span> {symbol}
+          <p className="crypto__info-card">
+            <span className="crypto__info--bold">Symbol: </span> {symbol}
           </p>
-          <div className="home__info-card">
-            <span className="home__info--bold home__info--bottom">
+          <div className="crypto__info-card">
+            <span className="crypto__info--bold crypto__info--bottom">
               Description:
             </span>{" "}
             {description}
           </div>
-          <div className="home__info-card home__info-price home__info--bottom">
+          <div className="crypto__info-card crypto__info-price crypto__info--bottom">
             <p>
-              <span className="home__info--bold">Price: </span> {" " + price}
+              <span className="crypto__info--bold">Price: </span> {" " + price}
             </p>
             <p>
-              <span className="home__info--bold">Marketcap: </span>{" "}
+              <span className="crypto__info--bold">Marketcap: </span>{" "}
               {" " + marketcap}
             </p>
             <p>
-              <span className="home__info--bold">Volume: </span> {" " + volume}
+              <span className="crypto__info--bold">Volume: </span>{" "}
+              {" " + volume}
             </p>
           </div>
         </div>
