@@ -1,6 +1,5 @@
 import "./CryptoPage.scss";
 import { useState, useEffect } from "react";
-import Select from "react-select";
 import axios from "axios";
 
 function CryptoPage() {
@@ -11,19 +10,6 @@ function CryptoPage() {
   let [price, setPrice] = useState();
   let [marketcap, setMarketCap] = useState();
   let [volume, setVolume] = useState();
-
-  const options = [
-    { value: "btc-bitcoin", label: "Bitcoin" },
-    { value: "eth-ethereum", label: "Ethereum" },
-    { value: "usdt-tether", label: "Tether" },
-    { value: "avax-avalanche", label: "Avalanche" },
-    { value: "hex-hex", label: "Hex" },
-    { value: "xrp-xrp", label: "XRP" },
-    { value: "sol-solana", label: "Solana" },
-    { value: "ada-cardano", label: "Cardano" },
-    { value: "usdc-usd-coin", label: "USD Coin" },
-    { value: "luna-terra", label: "Terra" },
-  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,9 +40,23 @@ function CryptoPage() {
     return (
       <div className="crypto">
         <div className="crypto__card">
-          Pick a coin and click go for more info!
+          <p className="crypto__instructions">
+            {" "}
+            Pick a coin and click go for more info!
+          </p>
           <form onSubmit={handleSubmit} className="crypto__form">
-            <Select name="select" options={options} />
+            <select name="select">
+              <option value="btc-bitcoin">Bitcoin</option>
+              <option value="eth-ethereum">Etherium</option>
+              <option value="usdt-tether">Tether</option>
+              <option value="avax-avalanche">Avalanche</option>
+              <option value="hex-hex">Hex</option>
+              <option value="xrp-xrp">XRP</option>
+              <option value="sol-solana">Solana</option>
+              <option value="ada-cardano">Cardano</option>
+              <option value="usdc-usd-coin">USD Coin</option>
+              <option value="luna-terra">Terra</option>
+            </select>
             <button className="crypto__button">GO</button>
           </form>
         </div>
@@ -67,7 +67,18 @@ function CryptoPage() {
     <div className="crypto">
       <div className="crypto__card">
         <form onSubmit={handleSubmit} className="crypto__form">
-          <Select name="select" options={options} />
+          <select name="select">
+            <option value="btc-bitcoin">Bitcoin</option>
+            <option value="eth-ethereum">Etherium</option>
+            <option value="usdt-tether">Tether</option>
+            <option value="avax-avalanche">Avalanche</option>
+            <option value="hex-hex">Hex</option>
+            <option value="xrp-xrp">XRP</option>
+            <option value="sol-solana">Solana</option>
+            <option value="ada-cardano">Cardano</option>
+            <option value="usdc-usd-coin">USD Coin</option>
+            <option value="luna-terra">Terra</option>
+          </select>
           <button className="crypto__button">GO</button>
         </form>
         <div className="crypto__info">

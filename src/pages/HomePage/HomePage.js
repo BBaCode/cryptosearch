@@ -1,13 +1,16 @@
 import "./HomePage.scss";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import PageFooter from "../../components/PageFooter/PageFooter";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
     <div className="home">
-      <div className="home__header-box">
-        <button className="home__header">Click Here</button>
-      </div>
+      <Link to="/crypto">
+        <div className="home__header-box">
+          <button className="home__header">Enter</button>
+        </div>
+      </Link>
       <div class="home__background">
         <PageHeader />
         <span></span>

@@ -1,18 +1,20 @@
-.crypto {
-  background: #4e54c8;
-  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-  width: 100%;
-  height: 88vh;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
+.crypto {
+  background: $black;
+
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__card {
-    background-color: white;
-    color: #454bcc;
-    width: 60vw;
-    height: 30rem;
+    background-color: $black;
+    color: $bluegreen;
+    width: 100%;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +22,10 @@
     padding: 2rem;
     overflow: scroll;
     border-radius: 4px;
+  }
+
+  &__instructions {
+    text-align: center;
   }
 
   &__form {
@@ -30,11 +36,16 @@
 
   &__button {
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: white;
+    padding: 0.5rem 4rem;
+    background-color: $black;
     border-radius: 4px;
-    border: solid 1px #454bcc;
-    color: #454bcc;
+    border: solid 1px $bluegreen;
+    color: $bluegreen;
+
+    &:hover {
+      background-color: $bluegreen;
+      color: $black;
+    }
   }
 
   &__info {
@@ -53,14 +64,15 @@
   }
 
   &__info-card {
-    width: 40%;
+    width: 80%;
     vertical-align: middle;
-    border: solid 1px #454bcc;
+    border: solid 1px $bluegreen;
     border-radius: 4px;
     padding: 1rem;
-    box-shadow: 10px 10px #454bcc;
-    max-height: 167px;
+    box-shadow: 10px 10px $bluegreen;
+
     overflow: scroll;
+    margin-bottom: 1.5rem;
   }
 
   &__info-price {

@@ -23,7 +23,12 @@
   &__header-box {
     margin: 20rem 0 0;
     background: rgba(20, 24, 23, 0.5);
-    padding: 1rem;
+    padding: 2.5rem 1rem;
+    border-radius: 50%;
+
+    &:hover {
+      border: 1px solid $bluegreen;
+    }
   }
 
   &__background {
